@@ -10,7 +10,9 @@ var HomeView = function(store) {
         
     this.findByName = function() {
         store.findByName($('.search-key').val(), function(employees) {
+            $('.freak-list').html(HomeView.li2Template(employees));
             $('.employee-list').html(HomeView.liTemplate(employees));
+            $('.freak-list').html(HomeView.li2Template(employees));
         });
     };
     
@@ -36,3 +38,4 @@ var HomeView = function(store) {
  
 HomeView.template = Handlebars.compile($("#home-tpl").html());
 HomeView.liTemplate = Handlebars.compile($("#employee-li-tpl").html());
+HomeView.li2Template = Handlebars.compile($("#freaks-li-tpl").html());
