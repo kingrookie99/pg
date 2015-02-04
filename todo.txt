@@ -1,0 +1,44 @@
++ Recherche: Slack und emmet
++ Katja Hoffmann-Thiel
++ Mertens-Vorbereitung
++ Rechnungen schreiben
+- Sistrix
++ GuideCom Aufwände!
++ Esken-Inhalte wieder aufbauen
++ GVE vorbereiten
++ Casa Deli Case
++ Barkawi Switch!
++ Meistersinger!
++ Interne Schulung Vorbereiten
++ Auditorium Modul installieren
++ Auf ins Paradies
++ GuideCom Schulung vorbereiten / Suche optimieren?
++ Auditorium Cron
+
+# Kleinigkeiten
++ Guidecom Stellen
+- gve platz schaffen, alte websites
+
+# Aufgaben
++ Webshop-Angebot wein-direktimport.de
+- Angebot olfen!
+- Shop Responsive Netensio
+
+# Blocker
+
+# Delegieren
++ Auf-ins-Paradies: Contest-Teilnahme-Check
++ Tornau Bilder
+
+# Projekte Allgemein
+- Meistersinger
+- Guidecom
+- Olfen
+- Ametek
+- Auditorium
+- GVE
+- Provinzial Shop
+- Provinzial CMS
+- Philip Winkels
+- Shop-Standard-Version
+
