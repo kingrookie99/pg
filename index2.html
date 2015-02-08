@@ -1,0 +1,77 @@
+<html>
+    <head>
+   
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="css/source-sans-pro.js"></script>
+    </head>
+    <body>
+ 
+        <script id="menu-partial" type="text/x-handlebars-template">
+            
+            <nav>
+                <div class='header'>
+                <ul>
+                    <li class="navi"><a href="index.html">Home</a></li>
+                    <li class="navi"><a href="#view1">Kita</a></li>
+                    <li class="navi"><a href="#view2">Tipps</a></li>
+                    <li class="navi"><a href="#view3">Kalendar</a></li>
+                    <li class="navi"><a href="#view4">Quiz</a></li>
+                </ul>
+                </div>
+            </nav>
+        </script>
+        
+        
+        <script src="lib/handlebars.js"></script>
+
+        <script id="home-tpl" type="text/x-handlebars-template">
+            {{> menu}}    
+            
+                <h1>Home</h1>
+     
+        </script>
+        
+        
+        <script id="kita-tpl" type="text/x-handlebars-template">
+            {{> menu}}
+            <div class="kita-tpl">
+                <h1>Kita</h1>
+            </div>
+                
+            
+        </script>
+ 
+        
+        <script id="tipps-tpl" type="text/x-handlebars-template">
+            {{> menu}}
+            
+                <h1>Tipps</h1>
+            </div>
+        </script>
+ 
+        <script id="kalendar-tpl" type="text/x-handlebars-template">
+            {{> menu}}
+            
+                <h1>Kalendar</h1>
+            
+        </script>
+        
+        <script id="quiz-tpl" type="text/x-handlebars-template">
+            {{> menu}}
+            
+                <h1>Quiz</h1>
+            
+        </script>
+        
+        <script src="lib/jquery-1.8.2.min.js"></script>
+
+        <script src="js/storage/memory-store.js"></script>
+        <script src="js/HomeView.js"></script>
+        <script src="js/KitaView.js"></script>
+        <script src="js/TippsView.js"></script>
+        <script src="js/QuizView.js"></script>
+        <script src="js/KalendarView.js"></script>
+        <script src="js/main2.js"></script>
+        <script src="js/jqCustom.js"></script>
+    </body>
+</html>

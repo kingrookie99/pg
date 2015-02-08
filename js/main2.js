@@ -22,11 +22,7 @@ var app = {
         }
         $(window).on('hashchange', $.proxy(this.route, this));
     },
-    
-    
-    
-    
-    
+
     showAlert: function (message, title) {
         if (navigator.notification) {
             navigator.notification.alert(message, null, title, 'OK');
@@ -75,6 +71,11 @@ var app = {
             $('body').html(new QuizView(this.store).render().el);
             return;
         }
+        
+        this.transition(
+          this.toRoute('view2'),
+          this.use('toLeft')
+);
     }
 
     
