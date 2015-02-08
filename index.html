@@ -4,69 +4,70 @@
         <script src="css/source-sans-pro.js"></script>
     </head>
     <body>
+ 
+        <script id="menu-partial" type="text/x-handlebars-template">
+            
+            <nav>
+                <div class='header'>
+                <ul>
+                    <li class="navi"><a href="index.html">Home</a></li>
+                    <li class="navi"><a href="#view1">Kita</a></li>
+                    <li class="navi"><a href="#view2">Tipps</a></li>
+                    <li class="navi"><a href="#view3">Kalendar</a></li>
+                    <li class="navi"><a href="#view4">Quiz</a></li>
+                </ul>
+                </div>
+            </nav>
+        </script>
+        
         
         <script src="lib/handlebars.js"></script>
 
         <script id="home-tpl" type="text/x-handlebars-template">
-            <a href="index2.html">zur Variante 2</a>
-            <div class='header'><h1>Home</h1></div>
-            <div class='search-bar'><input class='search-key' type="search"/></div>
-            <div class="scroll"><ul class='employee-list'></ul><ul class='freak-list'></ul></div>
-         
+            {{> menu}}    
+            
+                <h1>Home</h1>
+            
         </script>
-
-        <script id="employee-li-tpl" type="text/x-handlebars-template">
-            {{#.}}
-            <li><a href="#employees/{{this.id}}">{{this.firstName}} {{this.lastName}}<br/>{{this.title}}</a></li>
-            {{/.}}
-        </script>
-
-    
-        <script id="freaks-li-tpl" type="text/x-handlebars-template">
-            {{#.}}
-            <li><a href="#freaks/{{this.id}}">{{this.firstName}} {{this.lastName}}<br/>{{this.title}}</a></li>
-            {{/.}}
-        </script>    
         
-    
-        <script id="employee-tpl" type="text/x-handlebars-template">
-            <div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Employee-Details</h1></div>
-            <div class='details'>
-                <img class='employee-image' src='img/{{firstName}}_{{lastName}}.jpg' />
-                <h1>{{firstName}} {{lastName}}</h1>
-                <h2>{{title}}</h2>
-                <span class="location"></span>
-                <ul>
-                    <li><a href="tel:{{officePhone}}">Call Office<br/>{{officePhone}}</a></li>
-                    <li><a href="tel:{{cellPhone}}">Call Cell<br/>{{cellPhone}}</a></li>
-                    <li><a href="sms:{{cellPhone}}">SMS<br/>{{cellPhone}}</a></li>
-                </ul>
+        
+        <script id="kita-tpl" type="text/x-handlebars-template">
+            {{> menu}}
+            
+                <h1>Kita</h1>
+            
+        </script>
+ 
+        
+        <script id="tipps-tpl" type="text/x-handlebars-template">
+            {{> menu}}
+            
+                <h1>Tipps</h1>
             </div>
         </script>
+ 
+        <script id="kalendar-tpl" type="text/x-handlebars-template">
+            {{> menu}}
+            
+                <h1>Kalendar</h1>
+            
+        </script>
         
-        
-         <script id="freak-tpl" type="text/x-handlebars-template">
-            <div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Freak-Details</h1></div>
-            <div class='details'>
-                <img class='employee-image' src='img/{{firstName}}_{{lastName}}.jpg' />
-                <h1>{{firstName}} {{lastName}}</h1>
-                <h2>{{title}}</h2>
-                <span class="location"></span>
-                <ul>
-                    <li><a href="tel:{{officePhone}}">Call Office<br/>{{officePhone}}</a></li>
-                    <li><a href="tel:{{cellPhone}}">Call Cell<br/>{{cellPhone}}</a></li>
-                    <li><a href="sms:{{cellPhone}}">SMS<br/>{{cellPhone}}</a></li>
-                </ul>
-            </div>
-        </script>       
-        
+        <script id="quiz-tpl" type="text/x-handlebars-template">
+            {{> menu}}
+            
+                <h1>Quiz</h1>
+            
+        </script>
         
         <script src="lib/jquery-1.8.2.min.js"></script>
         <script src="js/storage/memory-store.js"></script>
         <script src="js/HomeView.js"></script>
-        <script src="js/EmployeeView.js"></script>
-        <script src="js/FreakView.js"></script>
-        <script src="js/main.js"></script>
-
+        <script src="js/KitaView.js"></script>
+        <script src="js/TippsView.js"></script>
+        <script src="js/QuizView.js"></script>
+        <script src="js/KalendarView.js"></script>
+        <script src="js/main2.js"></script>
+        <script src="js/jqCustom.js"></script>
     </body>
 </html>
