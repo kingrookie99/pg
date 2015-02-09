@@ -22,11 +22,7 @@ var app = {
         }
         $(window).on('hashchange', $.proxy(this.route, this));
     },
-    
-    
-    
-    
-    
+
     showAlert: function (message, title) {
         if (navigator.notification) {
             navigator.notification.alert(message, null, title, 'OK');
@@ -37,36 +33,49 @@ var app = {
     
      initialize: function() {
         var self = this;
-        this.view1 = /^#view1\/(\d{1,})/;
-        this.view2 = /^#view2\/(\d{1,})/;
-         this.view3 = /^#view3\/(\d{1,})/;
-         this.view4 = /^#view4\/(\d{1,})/;
+        this.kita =  '#view1';
+        this.tipps =  '#view2';
+        this.kalendar =  '#view3';
+        this.quiz =  '#view4';
+
         this.registerEvents();
         this.store = new MemoryStore(function() {
             self.route();
         });
+         
     },
     
     
     route: function() {
+        
         var hash = window.location.hash;
+        
         if (!hash) {
             $('body').html(new HomeView(this.store).render().el);
             return;
         }
-        var match = hash.match(app.view1);
-        if (match) {
-            this.store.findById(Number(match[1]), function(employee) {
-                $('body').html(new EmployeeView(employee).render().el);
-            });
+
+        if (hash == app.kita) {
+            $('body').html(new KitaView(this.store).render().el);
+            return;
+        }
+        if (hash == app.tipps) {
+            $('body').html(new TippsView(this.store).render().el);
+            return;
+        }
+        if (hash == app.kalendar) {
+            $('body').html(new KalendarView(this.store).render().el);
+            return;
+        }
+        if (hash == app.quiz) {        
+            $('body').html(new QuizView(this.store).render().el);
+            return;
         }
         
-        var match = hash.match(app.view2);
-        if (match) {
-            this.store.findById(Number(match[1]), function(employee) {
-                $('body').html(new FreakView(employee).render().el);
-            });
-        }
+        this.transition(
+          this.toRoute('view2'),
+          this.use('toLeft')
+);
     }
 
     
