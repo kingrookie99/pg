@@ -21,7 +21,7 @@
 
 # Aufgaben
 + Webshop-Angebot wein-direktimport.de
-- Angebot olfen!
++ Angebot olfen!
 - Shop Responsive Netensio
 
 # Blocker
