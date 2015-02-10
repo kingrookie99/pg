@@ -15,19 +15,14 @@
 	<script src="js/js_custom.js"></script>
     
     <script type="text/javascript" charset="utf-8">
-
+    /* GEOTEST */
     // Wait for device API libraries to load
-    //
     document.addEventListener("deviceready", onDeviceReady, false);
-
     // device APIs are available
-    //
     function onDeviceReady() {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
-
     // onSuccess Geolocation
-    //
     function onSuccess(position) {
         var element = document.getElementById('geolocation');
         element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
@@ -39,14 +34,15 @@
                             'Speed: '              + position.coords.speed                 + '<br />' +
                             'Timestamp: '          + position.timestamp                    + '<br />';
     }
-
     // onError Callback receives a PositionError object
-    //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
-
+        /* GEOTEST ENDE */
+        
+        
+        
     </script>
 </head>
 
@@ -97,7 +93,12 @@
 	</div><!-- /header -->
 	<div role="main" class="ui-content">
 		<h2>Two</h2>
-		<p></p>
+		<p>
+		    <script>
+		        navigator.notification.vibrateWithPattern([0, 100, 100, 200, 100, 400, 100, 800]);
+		    </script>
+		    
+		</p>
 
 	</div><!-- /content -->
 
